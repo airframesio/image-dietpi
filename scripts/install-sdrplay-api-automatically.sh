@@ -43,12 +43,9 @@ if {$force_conservative} {
 
 
 set timeout -1
-spawn ./SDRplay_RSP_API-Linux-3.07.1.run
+spawn $1
 match_max 100000
-expect -exact "Verifying archive integrity... All good.\r
-Uncompressing SDRplay RSP API Install Package V3.07 (installer v1)\r
-Installing SDRplay RSP API library 3.07...\r
-Press RETURN to view the license agreement"
+expect "Press RETURN to view the license agreement"
 send -- "\r"
 expect "Press y and RETURN "
 send -- "y\r"
