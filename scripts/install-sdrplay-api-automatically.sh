@@ -47,7 +47,7 @@ spawn $1
 match_max 100000
 expect "Press RETURN to view the license agreement"
 send -- "\r"
-expect "Press y and RETURN "
+expect "Press y and RETURN"
 send -- "y\r"
 expect "Would you "
 send -- "y\r"
