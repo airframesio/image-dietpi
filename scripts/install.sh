@@ -2,8 +2,8 @@
 
 echo "Airframes: Starting installer..."
 ./scripts/prep.sh
-./scripts/install-libacars.sh
 ./scripts/install-sdrplay.sh
+./scripts/install-libacars.sh
 ./scripts/install-airspy-drivers.sh
 ./scripts/install-soapysdr.sh
 ./scripts/install-soapysdr-airspy.sh
