@@ -17,7 +17,8 @@ chmod 755 ./SDRplay_RSP_API-Linux-3.07.1.run
 if [ -f "/tmp/install-sdrplay-api-automatically.sh" ]; then
   sudo apt install -y expect
   /tmp/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
-elif [ -f "~/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh"]; then
+elif [ -f "/opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh"]; then
+  sudo apt install -y expect
   /opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
 else
   ./SDRplay_RSP_API-Linux-3.07.1.run
