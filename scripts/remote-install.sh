@@ -5,7 +5,7 @@ echo "Airframes: Starting remote installer..."
 SOURCE_PATH="/var/source"
 REPO_IMAGE_DIETPI="https://github.com/airframesio/image-dietpi.git"
 
-sudo mkdir ${SOURCE_DIR}
+sudo mkdir ${SOURCE_PATH}
 sudo apt update
 sudo apt install -y apt-utils git
 
