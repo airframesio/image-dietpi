@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # sdrplay driver
+sudo mv /usr/bin/more /usr/bin/more.old
+sudo ln -s /usr/bin/cat /usr/bin/more
+
 cd ~/source
 rm -rf SDRplay
 mkdir SDRplay
@@ -19,3 +22,6 @@ elif [ -f "~/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh"];
 else
   ./SDRplay_RSP_API-Linux-3.07.1.run
 fi
+
+sudo rm /usr/bin/more
+sudo mv /usr/bin/more.old /usr/bin/more

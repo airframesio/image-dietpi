@@ -9,3 +9,8 @@
 ./scripts/install-soapysdr-sdrplay.sh
 SoapySDRUtil --info
 ./scripts/install-dumphfdl.sh
+
+cp scripts/run-hfdl.sh /usr/local/bin/airframes-run-hfdl.sh
+chmod +x /usr/local/bin/airframes-run-hfdl.sh
+
+./scripts/install-feeder-web.sh
