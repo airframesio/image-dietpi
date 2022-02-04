@@ -13,7 +13,4 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 8888
 
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/airframesio/image-dietpi/main/scripts/remote-install.sh"
-
-  config.vm.provision "file", source: "../feeder-web/index.html", destination: "/tmp/index.html"
-  config.vm.provision "shell", inline: "mv /tmp/index.html /var/www/html/index.html"
 end
