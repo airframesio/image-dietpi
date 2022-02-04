@@ -4,7 +4,7 @@
 sudo mv /usr/bin/more /usr/bin/more.old
 sudo ln -s /usr/bin/cat /usr/bin/more
 
-cd ~/source
+cd /opt/source
 rm -rf SDRplay
 mkdir SDRplay
 cd SDRplay
@@ -18,7 +18,7 @@ if [ -f "/tmp/install-sdrplay-api-automatically.sh" ]; then
   sudo apt install -y expect
   /tmp/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
 elif [ -f "~/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh"]; then
-  ~/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
+  /opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
 else
   ./SDRplay_RSP_API-Linux-3.07.1.run
 fi

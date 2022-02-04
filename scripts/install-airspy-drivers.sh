@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # airspy driver
-cd ~/source
+cd /opt/source
 sudo apt install -y build-essential cmake libusb-1.0-0-dev pkg-config
 rm -rf airspyone_host
 git clone https://github.com/airspy/airspyone_host.git
@@ -14,7 +14,7 @@ sudo make install
 sudo ldconfig
 
 # airspy hf+ driver
-cd ~/source
+cd /opt/source
 sudo apt install -y build-essential cmake libusb-1.0-0-dev pkg-config
 rm -rf airspyhf
 git clone https://github.com/airspy/airspyhf.git

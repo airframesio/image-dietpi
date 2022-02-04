@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Soapy Airspy HF
-cd ~/source
+cd /opt/source
 rm -rf SoapyAirspyHF
 git clone https://github.com/pothosware/SoapyAirspyHF.git
 cd SoapyAirspyHF

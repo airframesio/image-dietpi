@@ -3,7 +3,7 @@
 # libacars
 sudo apt install -y build-essential cmake pkg-config libglib2.0-dev libconfig++-dev libliquid-dev libfftw3-dev git
 
-cd ~/source
+cd /opt/source
 rm -rf libacars
 git clone https://github.com/szpajder/libacars.git
 

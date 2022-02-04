@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Soapy SDR Play
-cd ~/source
+cd /opt/source
 rm -rf SoapySDRPlay
 git clone https://github.com/pothosware/SoapySDRPlay.git
 cd SoapySDRPlay
