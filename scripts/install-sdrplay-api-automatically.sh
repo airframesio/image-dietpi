@@ -17,6 +17,7 @@
 # this in the first place.  The -C flag allows you to define a
 # character to toggle this mode off and on.
 
+set script [lindex $argv 0];
 set force_conservative 1  ;# set to 1 to force conservative mode even if
 			  ;# script wasn't run conservatively originally
 if {$force_conservative} {
@@ -43,7 +44,7 @@ if {$force_conservative} {
 
 
 set timeout -1
-spawn $1
+spawn $script
 match_max 100000
 expect "Press RETURN to view the license agreement"
 send -- "\r"
