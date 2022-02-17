@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # dumphfdl
-sudo apt install -y -qq libsqlite3-dev libzmq3-dev
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq libsqlite3-dev libzmq3-dev < /dev/null > /dev/null
+
 cd /opt/source
 rm -rf statsd-c-client
 git clone https://github.com/romanbsd/statsd-c-client.git

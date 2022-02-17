@@ -2,5 +2,5 @@
 
 # Prep
 sudo mkdir /opt/source
-sudo apt update -qq
-sudo apt install -y -qq apt-utils
+DEBIAN_FRONTEND=noninteractive sudo apt-get update -qq
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq apt-utils

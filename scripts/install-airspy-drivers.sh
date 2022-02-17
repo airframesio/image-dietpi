@@ -14,8 +14,9 @@ sudo make install
 sudo ldconfig
 
 # airspy hf+ driver
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq build-essential cmake libusb-1.0-0-dev pkg-config < /dev/null > /dev/null
+
 cd /opt/source
-sudo apt install -y -qq build-essential cmake libusb-1.0-0-dev pkg-config
 rm -rf airspyhf
 git clone https://github.com/airspy/airspyhf.git
 cd airspyhf

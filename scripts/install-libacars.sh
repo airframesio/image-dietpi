@@ -8,7 +8,7 @@ rm -rf libacars
 git clone https://github.com/szpajder/libacars.git
 
 cd libacars
-apt install -y -qq zlib1g-dev libxml2-dev
+DEBIAN_FRONTEND=noninteractive apt install -qq zlib1g-dev libxml2-dev
 mkdir build
 
 cd build
