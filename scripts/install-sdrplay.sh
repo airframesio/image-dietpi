@@ -3,8 +3,9 @@
 echo "Airframes: Installing SDRPlay drivers"
 
 # sdrplay driver
-sudo mv /usr/bin/more /usr/bin/more.old
-sudo ln -s /usr/bin/cat /usr/bin/more
+MORE_BINARY=$(which more)
+sudo mv ${MORE_BINARY} ${MORE_BINARY}.old
+sudo ln -s /usr/bin/cat ${MORE_BINARY}
 
 cd /opt/source
 rm -rf SDRplay
@@ -26,5 +27,5 @@ else
   ./SDRplay_RSP_API-Linux-3.07.1.run
 fi
 
-sudo rm /usr/bin/more
-sudo mv /usr/bin/more.old /usr/bin/more
+sudo rm ${MORE_BINARY}
+sudo mv ${MORE_BINARY}.old ${MORE_BINARY}
