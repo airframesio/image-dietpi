@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SoapySDR
-sudo apt install -y cmake g++ libpython3-dev python3-numpy swig
+sudo apt install -y -qq cmake g++ libpython3-dev python3-numpy swig
 cd /opt/source
 rm -rf SoapySDR
 git clone https://github.com/pothosware/SoapySDR.git

@@ -2,5 +2,5 @@
 
 # Prep
 sudo mkdir /opt/source
-sudo apt update
-sudo apt install apt-utils
+sudo apt update -qq
+sudo apt install -y -qq apt-utils

@@ -15,7 +15,7 @@ sudo ldconfig
 
 # airspy hf+ driver
 cd /opt/source
-sudo apt install -y build-essential cmake libusb-1.0-0-dev pkg-config
+sudo apt install -y -qq build-essential cmake libusb-1.0-0-dev pkg-config
 rm -rf airspyhf
 git clone https://github.com/airspy/airspyhf.git
 cd airspyhf
