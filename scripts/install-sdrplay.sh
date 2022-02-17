@@ -15,10 +15,10 @@ sudo chmod 755 /usr/local/bin/restartSDRplay
 wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run
 chmod 755 ./SDRplay_RSP_API-Linux-3.07.1.run
 if [ -f "/tmp/install-sdrplay-api-automatically.sh" ]; then
-  DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq expect
+  DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq expect < /dev/null > /dev/null
   /tmp/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
 elif [ -f "/opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
-  DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq expect
+  DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq expect < /dev/null > /dev/null
   /opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
 else
   ./SDRplay_RSP_API-Linux-3.07.1.run

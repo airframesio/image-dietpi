@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # libacars
-sudo apt install -y build-essential cmake pkg-config libglib2.0-dev libconfig++-dev libliquid-dev libfftw3-dev git
+DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq build-essential cmake pkg-config libglib2.0-dev libconfig++-dev libliquid-dev libfftw3-dev git zlib1g-dev libxml2-dev < /dev/null > /dev/null
 
 cd /opt/source
 rm -rf libacars
 git clone https://github.com/szpajder/libacars.git
 
 cd libacars
-DEBIAN_FRONTEND=noninteractive apt install -qq zlib1g-dev libxml2-dev
 mkdir build
 
 cd build
