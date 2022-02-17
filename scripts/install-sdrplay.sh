@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Airframes: Installing SDRPlay drivers"
+
 # sdrplay driver
 sudo mv /usr/bin/more /usr/bin/more.old
 sudo ln -s /usr/bin/cat /usr/bin/more

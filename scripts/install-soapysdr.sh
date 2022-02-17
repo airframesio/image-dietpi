@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Airframes: Installing SoapySDR"
+
 # SoapySDR
 DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq cmake g++ libpython3-dev python3-numpy swig < /dev/null > /dev/null
 

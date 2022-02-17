@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Airframes:   - airspy"
+
 # Soapy Airspy HF
 cd /opt/source
 rm -rf SoapyAirspyHF

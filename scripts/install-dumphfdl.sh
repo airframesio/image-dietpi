@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Airframes: Installing dumphfdl"
+
 # dumphfdl
 DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq libsqlite3-dev libzmq3-dev < /dev/null > /dev/null
 

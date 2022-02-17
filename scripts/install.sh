@@ -6,6 +6,7 @@ echo "Airframes: Starting installer..."
 ./scripts/install-libacars.sh
 ./scripts/install-airspy-drivers.sh
 ./scripts/install-soapysdr.sh
+echo "Airframes: Installing SoapySDR drivers"
 ./scripts/install-soapysdr-airspy.sh
 ./scripts/install-soapysdr-sdrplay.sh
 SoapySDRUtil --info

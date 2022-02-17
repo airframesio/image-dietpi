@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Airframes:   - sdrplay"
+
 # Soapy SDR Play
 cd /opt/source
 rm -rf SoapySDRPlay
