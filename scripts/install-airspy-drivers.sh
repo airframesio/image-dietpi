@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Airframes: Installing Airspy drivers"
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq build-essential cmake libusb-1.0-0-dev pkg-config < /dev/null > /dev/null
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq build-essential cmake libusb-1.0-0-dev pkg-config < /dev/null > /dev/null
 
 # airspy driver
 echo "Airframes:   - airspy"

@@ -3,7 +3,7 @@
 echo "Airframes: Installing dumphfdl"
 
 # dumphfdl
-DEBIAN_FRONTEND=noninteractive sudo apt-get install -qq libsqlite3-dev libzmq3-dev < /dev/null > /dev/null
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq libsqlite3-dev libzmq3-dev < /dev/null > /dev/null
 
 cd /opt/source
 rm -rf statsd-c-client
