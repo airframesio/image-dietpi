@@ -2,6 +2,11 @@
 
 echo "Airframes: Installing SDRPlay drivers"
 
+DISTRO=$(uname -s)
+if [ "$DISTRO" == 'Ubuntu' ]; then
+  sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq libudev-dev < /dev/null > /dev/null
+fi
+
 # sdrplay driver
 MORE_BINARY=$(which more)
 CAT_BINARY=$(which cat)
