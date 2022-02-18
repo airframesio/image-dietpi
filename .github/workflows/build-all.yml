@@ -28,6 +28,8 @@ jobs:
 
       - name: Check out code into the Go module directory
         uses: actions/checkout@v2.3.4
+        with:
+          repository: 'mkaczanowski/packer-builder-arm'
 
       - name: Get dependencies
         run: |
