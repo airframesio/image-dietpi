@@ -4,8 +4,9 @@ echo "Airframes: Installing SDRPlay drivers"
 
 # sdrplay driver
 MORE_BINARY=$(which more)
+CAT_BINARY=$(which cat)
 sudo mv ${MORE_BINARY} ${MORE_BINARY}.old
-sudo ln -s /usr/bin/cat ${MORE_BINARY}
+sudo ln -s ${CAT_BINARY} ${MORE_BINARY}
 
 cd /opt/source
 rm -rf SDRplay
@@ -15,6 +16,7 @@ wget https://www.sdrplay.com/software/SDRplay_Linux_Scripts_v0.2.zip
 unzip SDRplay_Linux_Scripts_v0.2.zip
 sudo cp restartService.sh /usr/local/bin/restartSDRplay
 sudo chmod 755 /usr/local/bin/restartSDRplay
+
 wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run
 chmod 755 ./SDRplay_RSP_API-Linux-3.07.1.run
 if [ -f "/tmp/install-sdrplay-api-automatically.sh" ]; then
