@@ -7,7 +7,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq cmake g++ libpython3-dev
 
 cd /opt/source
 rm -rf SoapySDR
-git clone https://github.com/pothosware/SoapySDR.git
+git clone --quiet https://github.com/pothosware/SoapySDR.git
 cd SoapySDR
 mkdir build
 cd build

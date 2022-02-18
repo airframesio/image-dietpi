@@ -13,7 +13,7 @@ fi
 
 cd /opt/source
 rm -rf libacars
-git clone https://github.com/szpajder/libacars.git
+git clone --quiet https://github.com/szpajder/libacars.git
 
 cd libacars
 mkdir build

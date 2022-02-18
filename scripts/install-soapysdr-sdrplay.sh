@@ -5,7 +5,7 @@ echo "Airframes:   - sdrplay"
 # Soapy SDR Play
 cd /opt/source
 rm -rf SoapySDRPlay
-git clone https://github.com/pothosware/SoapySDRPlay.git
+git clone --quiet https://github.com/pothosware/SoapySDRPlay.git
 cd SoapySDRPlay
 mkdir build
 cd build

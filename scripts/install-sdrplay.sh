@@ -2,7 +2,7 @@
 
 echo "Airframes: Installing SDRPlay drivers"
 
-DISTRO=$(lsb_release -i)
+DISTRO=$(lsb_release -s -i)
 echo $DISTRO
 if [ "$DISTRO" == 'Ubuntu' ]; then
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq libudev-dev < /dev/null > /dev/null
@@ -23,7 +23,7 @@ unzip -q SDRplay_Linux_Scripts_v0.2.zip
 sudo cp restartService.sh /usr/local/bin/restartSDRplay
 sudo chmod 755 /usr/local/bin/restartSDRplay
 
-wget https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run
+wget -q https://www.sdrplay.com/software/SDRplay_RSP_API-Linux-3.07.1.run
 chmod 755 ./SDRplay_RSP_API-Linux-3.07.1.run
 if [ -f "/tmp/install-sdrplay-api-automatically.sh" ]; then
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null

@@ -7,7 +7,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq build-essential cmake li
 echo "Airframes:   - airspy"
 cd /opt/source
 rm -rf airspyone_host
-git clone https://github.com/airspy/airspyone_host.git
+git clone --quiet https://github.com/airspy/airspyone_host.git
 cd airspyone_host
 mkdir build
 cd build
@@ -20,7 +20,7 @@ sudo ldconfig
 echo "Airframes:   - airspyhf"
 cd /opt/source
 rm -rf airspyhf
-git clone https://github.com/airspy/airspyhf.git
+git clone --quiet https://github.com/airspy/airspyhf.git
 cd airspyhf
 mkdir build
 cd build
