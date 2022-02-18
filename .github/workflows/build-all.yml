@@ -66,5 +66,9 @@ jobs:
           sudo apt clean
           docker rmi $(docker image ls -aq)
           df -h
+
+      - name: Check out code
+        uses: actions/checkout@v2.3.4
+
       - name: Build image
         run: sudo ./packer build packer/definitions/${{ matrix.definitions }}
