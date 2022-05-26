@@ -26,7 +26,8 @@ AUTOMATIC_SCRIPT="install-sdrplay-api-automatically.sh"
 DOWNLOAD_SCRIPTS_FILE="SDRplay_${SCRIPTS_TYPE}_Scripts_v${SCRIPTS_VERSION}.zip"
 DOWNLOAD_SCRIPTS_URL="https://www.sdrplay.com/software/${DOWNLOAD_SCRIPTS_FILE}"
 DOWNLOAD_FIRMWARE_FILE="SDRplay_RSP_API-${PLATFORM}-${API_VERSION}.run"
-DOWNLOAD_FIRMWARE_FILE="https://www.sdrplay.com/software/${DOWNLOAD_FIRMWARE_FILE}"
+DOWNLOAD_FIRMWARE_URL="https://www.sdrplay.com/software/${DOWNLOAD_FIRMWARE_FILE}"
+BUILD_PATH="${BUILD_PATH:-/tmp/SDRplay}"
 
 echo "Airframes: Installing SDRPlay drivers"
 
@@ -42,7 +43,8 @@ CAT_BINARY=$(which cat)
 sudo mv ${MORE_BINARY} ${MORE_BINARY}.old
 sudo ln -s ${CAT_BINARY} ${MORE_BINARY}
 
-cd /opt/source
+mkdir -p ${BUILD_PATH}
+cd ${BUILD_PATH}
 rm -rf SDRplay
 mkdir SDRplay
 cd SDRplay
@@ -56,7 +58,7 @@ chmod 755 ./${DOWNLOAD_FIRMWARE_FILE}
 if [ -f "${AUTOMATIC_SCRIPT" ]; then
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null
   bash ${AUTOMATIC_SCRIPT} ./${DOWNLOAD_FIRMWARE_FILE}
-elif [ -f "/opt/source" && -f "/opt/source/image-dietpi" && -f "/opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
+elif [ -f "${BUILD_PATH}" && -f "${BUILD_PATH}/image-dietpi" && -f "${BUILD_PATH}/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
   # image-dietpi specific (legacy)
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null
   /opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
