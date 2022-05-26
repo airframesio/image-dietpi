@@ -55,10 +55,10 @@ sudo chmod 755 /usr/local/bin/restartSDRplay
 
 wget -q ${DOWNLOAD_FIRMWARE_URL}
 chmod 755 ./${DOWNLOAD_FIRMWARE_FILE}
-if [ -f "${AUTOMATIC_SCRIPT" ]; then
+if [ -f "./${AUTOMATIC_SCRIPT" ]; then
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null
   bash ${AUTOMATIC_SCRIPT} ./${DOWNLOAD_FIRMWARE_FILE}
-elif [ -f "${BUILD_PATH}" && -f "${BUILD_PATH}/image-dietpi" && -f "${BUILD_PATH}/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
+elif [ -f "${BUILD_PATH}" -a -f "${BUILD_PATH}/image-dietpi" -a -f "${BUILD_PATH}/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
   # image-dietpi specific (legacy)
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null
   /opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
