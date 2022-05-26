@@ -56,7 +56,7 @@ chmod 755 ./${DOWNLOAD_FIRMWARE_FILE}
 if [ -f "${AUTOMATIC_SCRIPT" ]; then
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null
   bash ${AUTOMATIC_SCRIPT} ./${DOWNLOAD_FIRMWARE_FILE}
-elif [ -f "/opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
+elif [ -f "/opt/source" && -f "/opt/source/image-dietpi" && -f "/opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh" ]; then
   # image-dietpi specific (legacy)
   sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq expect < /dev/null > /dev/null
   /opt/source/image-dietpi/scripts/install-sdrplay-api-automatically.sh ./SDRplay_RSP_API-Linux-3.07.1.run
