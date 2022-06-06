@@ -12,13 +12,13 @@ case $ARCH in
     PLATFORM=ARM64
     SCRIPTS_TYPE=RPi
     SCRIPTS_VERSION=0.3
-    API_VERSION=3.07.2
+    API_VERSION=3.07.1
     ;;
   *)
     PLATFORM=Linux
     SCRIPTS_TYPE=Linux
     SCRIPTS_VERSION=0.2
-    API_VERSION=3.07.2
+    API_VERSION=3.07.1
     ;;
 esac
 
